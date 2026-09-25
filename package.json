@@ -1,0 +1,26 @@
+{
+  "name": "cheese-heist",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "revideo editor --projectFile ./src/project.tsx",
+    "check": "tsc --noEmit",
+    "audio": "python audio/build_audio.py",
+    "render": "tsc && node dist/render.js",
+    "render:landscape": "tsc && node dist/render.js --orientation landscape",
+    "render:portrait": "tsc && node dist/render.js --orientation portrait",
+    "stills": "python tools/stills.py"
+  },
+  "dependencies": {
+    "@revideo/2d": "0.11.0",
+    "@revideo/core": "0.11.0",
+    "@revideo/renderer": "0.11.0"
+  },
+  "devDependencies": {
+    "@revideo/cli": "0.11.0",
+    "@revideo/ui": "0.11.0",
+    "@types/node": "^22.20.4",
+    "typescript": "5.5.4",
+    "vite": "^4.5"
+  }
+}
